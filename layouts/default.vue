@@ -1,15 +1,16 @@
 <script setup lang="ts">
-import ThemeToggle from "~/components/DarkMode/ThemeToggle.vue";
+import AppHeader from "~/components/bars/Header/AppHeader.vue";
 
 
 </script>
 
 <template>
-  <div class="m-4 fixed right-5">
-    <ThemeToggle/>
+  <div class="flex flex-col h-screen">
+    <AppHeader />
+    <div class="flex-1 overflow-y-auto">
+      <slot />
+    </div>
   </div>
-  <slot />
-
 </template>
 
 <style scoped>
